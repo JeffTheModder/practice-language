@@ -2,17 +2,20 @@ module.exports = {
     program: {
         body: [
             {
-                type: "variableDeclaration",
-                name: 'a',
-                value: "hello, world"
-            },
-            {
                 type: "functionCall",
                 callee: "log",
                 arguments: [
                     {
-                        type: "identifier",
-                        name: 'a'
+                        type: "operation",
+                        name: '+',
+                        left: {
+                            type: "number",
+                            value: 5
+                        },
+                        right: {
+                            type: "number",
+                            value: 6
+                        }
                     }
                 ]
             }
